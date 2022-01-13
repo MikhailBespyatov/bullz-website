@@ -1,5 +1,5 @@
 @font-face {
-  font-family: $covik-sans-mono;
+  font-family: 'Covik Sans Mono';
   src: url('../assets/fonts/CovikSans-mono/covik_sans_mono_black.woff2') format('woff2'),
     url('../assets/fonts/CovikSans-mono/covik_sans_mono_black.woff') format('woff'),
     url('../assets/fonts/CovikSans-mono/covik_sans_mono_black.ttf') format('truetype');
@@ -11,8 +11,10 @@
 //TODO need to add woff and woff2 format for HWT Unit Gothic 716
 
 @font-face {
-  font-family: $htw-unit-cothic;
-  src: url('../assets/fonts/HWTUnitGothic-716/HWT_unit_gothic_716.ttf') format('truetype');
+  font-family: 'HWT Unit Cothic 716';
+  src: url('../assets/fonts/HWTUnitGothic-716/HWT_unit_gothic_716.woff2') format('woff2'),
+    url('../assets/fonts/HWTUnitGothic-716/HWT_unit_gothic_716.woff') format('woff'),
+    url('../assets/fonts/HWTUnitGothic-716/HWT_unit_gothic_716.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
