@@ -1,0 +1,57 @@
+@import 'styles/variables';
+@import 'styles/media';
+
+.title {
+  font-family: $htw-unit-cothic;
+  color: $blue;
+
+  &_color_white {
+    color: $white;
+  }
+
+  &_h1 {
+    font-size: 30px;
+    line-height: 40px;
+
+    @include tablet {
+      font-size: 42px;
+      line-height: 52px;
+    }
+    @include laptop {
+      font-size: 50px;
+      line-height: 52px;
+    }
+    @include desktop {
+      font-size: 60px;
+      line-height: 60px;
+    }
+  }
+
+  &_h2 {
+    font-size: 20px;
+    line-height: 25px;
+
+    @include tablet {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    @include laptop {
+      font-size: 42px;
+      line-height: 52px;
+    }
+    @include desktop {
+      font-size: 50px;
+      line-height: 52px;
+    }
+  }
+
+  &_h3 {
+    font-size: 14px;
+    line-height: 22px;
+
+    @include laptop {
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+}
