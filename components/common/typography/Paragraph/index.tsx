@@ -7,6 +7,6 @@ interface Props {
 }
 
 export const Paragraph: React.FC<Props> = ({ type, children }) => {
-  const classNames = cn(styles.paragraph, styles[`paragraph_${type}`]);
+  const classNames = cn(styles.paragraph, { [styles[`paragraph_${type}`]]: type });
   return <p className={classNames}>{children}</p>;
 };
