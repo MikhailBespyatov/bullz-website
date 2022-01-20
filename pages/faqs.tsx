@@ -1,7 +1,8 @@
 import { MainLayout } from 'components/common/layouts/MainLayout';
 import Head from 'next/head';
+import React from 'react';
 
-export default function Home() {
+export default function Faqs() {
   return (
     <div>
       <Head>

@@ -13,6 +13,7 @@ module.exports = {
       use: ['style-loader', 'css-loader', 'sass-loader'],
       include: path.resolve(__dirname, '../')
     });
+    config.resolve.modules = [...(config.resolve.modules || []), path.resolve(__dirname, '../')];
 
     return config;
   }

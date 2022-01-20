@@ -1,0 +1,31 @@
+@import 'styles/media';
+@import 'styles/mixins';
+
+.socialIconsWrapper {
+  @include alignCenter;
+}
+
+.socialIconWrapper {
+  @include alignCenter;
+
+  cursor: pointer;
+  transition: opacity 0.3s;
+
+  &:first-child {
+    margin-right: 20px;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.socialIcon {
+  width: 20px;
+  height: 20px;
+
+  @include desktop {
+    width: 24px;
+    height: 24px;
+  }
+}

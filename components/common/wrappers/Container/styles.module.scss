@@ -1,0 +1,27 @@
+@import 'styles/media';
+
+.wrapper {
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @include tablet {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @include laptop {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  @include desktop {
+    padding-left: 154px;
+    padding-right: 154px;
+  }
+
+  @include big-screen {
+    max-width: 1132px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
