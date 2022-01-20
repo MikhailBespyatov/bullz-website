@@ -1,0 +1,177 @@
+@import 'styles/variables';
+@import 'styles/media';
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @include tablet {
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @include laptop {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  @include desktop {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 58px;
+  flex-shrink: 0;
+
+  @include tablet {
+    width: 68px;
+  }
+
+  @include laptop {
+    width: 90px;
+  }
+
+  @include desktop {
+    width: 105px;
+  }
+}
+
+.navWrapper {
+  position: absolute;
+  top: 46px;
+  left: 0;
+  padding-top: 16px;
+  padding-left: 36px;
+  padding-right: 36px;
+  background-color: $black;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-140%);
+  transition: transform 0.4s;
+
+  &_opened {
+    transform: translateX(0);
+  }
+
+  @include tablet {
+    position: static;
+    transform: translateX(0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    margin-left: 30px;
+  }
+
+  @include laptop {
+    margin-left: 40px;
+  }
+
+  @include desktop {
+    margin-left: 120px;
+  }
+
+  @include big-screen {
+    margin-left: 160px;
+  }
+}
+
+.navItem {
+  display: block;
+  font-family: $covik-sans-mono;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: $light-gray;
+  margin-bottom: 16px;
+
+  &_active,
+  &:hover {
+    color: white;
+    text-decoration-line: underline;
+  }
+
+  @include tablet {
+    display: inline-block;
+    margin-bottom: 0;
+
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+
+  @include laptop {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.burgerButton {
+  position: relative;
+  width: 24px;
+  height: 20px;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: $white;
+    transition: transform 0.4s;
+  }
+
+  &::before {
+    top: 6px;
+  }
+
+  &::after {
+    bottom: 6px;
+  }
+
+  &_opened {
+    position: relative;
+    width: 24px;
+    height: 20px;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 24px;
+      height: 2px;
+      background: $white;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
