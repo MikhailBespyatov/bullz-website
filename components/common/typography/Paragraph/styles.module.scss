@@ -1,0 +1,37 @@
+@import 'styles/variables';
+@import 'styles/media';
+
+
+.paragraph {
+  font-family: $covik-sans-mono;
+  font-size: 14px;
+  line-height: 22px;
+  color: $white;
+
+  @include laptop {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+  }
+
+  &_gothic {
+    font-family: $htw-unit-gothic;
+    font-weight: 400;
+
+    @include laptop {
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+
+  &_covic-semi-bold {
+    font-weight: 600;
+
+    @include desktop {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+}
+
+
