@@ -18,13 +18,13 @@ export const Header = () => {
     <header>
       <Container className={styles.wrapper}>
         <Link href="/">
-          <a className={styles.logoWrapper}>
-            <Image src={bullzLogo} alt="bullz website logo"></Image>
+          <a className={styles.logoWrapper} aria-label="go to main page">
+            <Image src={bullzLogo} alt="bullz website logo" />
           </a>
         </Link>
         <div
-          className={cn(styles.navWrapper, {
-            [styles.navWrapper_opened]: opened
+          className={cn(styles.navAndSocialWrapper, {
+            [styles.navAndSocialWrapper_opened]: opened
           })}
         >
           <nav>
@@ -44,10 +44,12 @@ export const Header = () => {
         </div>
 
         <button
+          type="button"
           className={cn(styles.burgerButton, {
             [styles.burgerButton_opened]: opened
           })}
           onClick={onBurgerButtonClick}
+          aria-label={opened ? 'close main menu' : 'open main menu'}
         />
       </Container>
     </header>
