@@ -4,13 +4,7 @@ import { Paragraph } from '.';
 export default {
   title: 'Paragraph',
   component: Paragraph,
-  decorators: [
-    Story => (
-      <>
-        <Story />
-      </>
-    )
-  ]
+  decorators: [Story => <Story />]
 } as Meta;
 
 export const Paragraphs = () => (

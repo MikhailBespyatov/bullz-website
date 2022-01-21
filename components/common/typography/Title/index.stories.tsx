@@ -4,13 +4,7 @@ import { Title } from '.';
 export default {
   title: 'Title',
   component: Title,
-  decorators: [
-    Story => (
-      <>
-        <Story />
-      </>
-    )
-  ]
+  decorators: [Story => <Story />]
 } as Meta;
 
 export const Titles = () => (
