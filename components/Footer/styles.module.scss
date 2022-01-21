@@ -1,0 +1,70 @@
+@import 'styles/media';
+@import 'styles/mixins';
+
+.footer {
+  text-align: center;
+}
+
+.bullzIconWrapper {
+  margin-bottom: 20px;
+}
+
+.copyright {
+  @include tablet {
+    @include flexCenter;
+  }
+}
+
+.copyrightInfo {
+  @include flexCenter;
+
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 16px;
+
+  &_container {
+    display: block;
+    max-width: 195px;
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+
+  @include laptop {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.link {
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+
+  transition: opacity 0.3s;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @include tablet {
+    margin-bottom: 0;
+    margin-left: 12px;
+  }
+
+  @include laptop {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

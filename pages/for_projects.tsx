@@ -9,7 +9,7 @@ export default function ForProjects() {
         <title>BULLZ</title>
         <meta name="description" content="BULLZ website" />
       </Head>
-      <MainLayout></MainLayout>
+      <MainLayout />
     </div>
   );
 }
