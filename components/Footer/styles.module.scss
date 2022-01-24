@@ -59,7 +59,9 @@
   }
 
   @include tablet {
-    margin-bottom: 0;
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
     margin-left: 12px;
   }
 
