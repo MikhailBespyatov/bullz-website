@@ -1,0 +1,29 @@
+@import 'styles/mixins';
+@import 'styles/media';
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+
+  @include tablet {
+    justify-content: flex-start;
+  }
+}
+
+.storeLink {
+  cursor: pointer;
+  width: 126px;
+
+  @include tablet {
+    &:last-child {
+      margin-left: 12px;
+    }
+  }
+
+  @include desktop {
+    &:last-child {
+      margin-left: 20px;
+    }
+    width: 148px;
+  }
+}
