@@ -1,0 +1,18 @@
+@import 'styles/media';
+
+.title {
+  margin-bottom: 16px;
+}
+
+.titleTextContainer {
+  display: block;
+  width: 195px;
+  text-transform: uppercase;
+}
+
+.cardsWrapper {
+  @include tablet {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
