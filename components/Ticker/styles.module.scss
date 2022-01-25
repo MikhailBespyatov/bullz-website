@@ -1,0 +1,23 @@
+@import 'styles/variables';
+@import 'styles/media';
+
+.marquee {
+  overflow-y: hidden;
+}
+
+.content {
+  font-family: $htw-unit-gothic;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 26px;
+
+  @include tablet {
+    font-size: 46px;
+    line-height: 46px;
+  }
+
+  @include laptop {
+    font-size: 70px;
+    line-height: 60px;
+  }
+}
