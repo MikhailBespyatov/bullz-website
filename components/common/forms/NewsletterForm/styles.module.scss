@@ -2,36 +2,35 @@
 @import 'styles/mixins';
 @import 'styles/media';
 
-.link {
+.form {
+  @include tablet {
+    width: 264px;
+  }
+}
+
+.title {
+  font-family: $covik-sans-mono;
+  font-size: 16px;
+  line-height: 20px;
+
+  margin-bottom: 20px;
+
+  @include laptop {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.button {
   width: 100%;
-
-  padding-top: 14px;
-  padding-bottom: 14px;
-
-  @include flexCenter;
+  padding-top: 15px;
+  padding-bottom: 15px;
 
   border: 2px solid $blue;
-  box-sizing: border-box;
-  border-radius: 3px;
+  border-radius: 40px;
 
-  transition: background-color 0.3s;
-
-  &:hover {
-    background-color: $blue;
-  }
-
-  @include tablet {
-    width: fit-content;
-    padding-left: 24px;
-    padding-right: 46px;
-  }
-
-  @include desktop {
-    padding-left: 32px;
-    padding-right: 54px;
-    padding-top: 18px;
-    padding-bottom: 18px;
-  }
+  @include flexCenter;
 }
 
 .content {
@@ -39,6 +38,7 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: bold;
+  text-transform: uppercase;
 
   position: relative;
 
@@ -51,7 +51,6 @@
   }
 
   &::before {
-    content: '';
     right: -17px;
 
     width: 11px;
