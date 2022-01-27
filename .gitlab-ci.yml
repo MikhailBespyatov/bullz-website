@@ -1,0 +1,41 @@
+image: node:14-alpine
+
+cache:
+    paths:
+        - node_modules
+
+stages:
+    - lint/build
+    - build/deploy-stage-dev
+
+lint/build:
+    stage: lint/build
+    before_script:
+        - apk update
+        - apk add --no-cache python3 make g++
+    script:
+        - echo "Linting"
+        - yarn
+        - yarn lint
+        - echo "Linting successful"
+        - yarn build
+        - echo "building successful"
+    only:
+        - merge_requests
+
+# Deploying development version to "KONTUR-A/Development"
+build/deploy-stage-dev:
+    stage: build/deploy-stage-dev
+    variables:
+        SERVER: '$USER_DEV_DO@$HOST_DEV_DO'
+    before_script:
+        - apk update
+        - apk add --update --no-cache openssh sshpass
+        - apk add --no-cache python3 make g++
+        - export SSHPASS=$USER_PASS_DEV_DO
+    script:
+        - echo "Staging to DigitalOcean server"
+        - sshpass -e ssh -oStrictHostKeyChecking=no -tt "$SERVER" "$SCRIPT_DEV_DO"
+        - echo "Staged"
+    only:
+        - master
