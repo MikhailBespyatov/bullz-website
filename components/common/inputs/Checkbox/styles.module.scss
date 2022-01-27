@@ -1,0 +1,27 @@
+@import 'styles/media';
+
+.label {
+  display: flex;
+  justify-content: flex-start;
+
+  font-size: 14px;
+  line-height: 22px;
+
+  &_error {
+    color: $tomato;
+  }
+
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+
+  flex-shrink: 0;
+  margin-right: 10px;
+
+  @include tablet {
+    margin-right: 15px;
+  }
+}

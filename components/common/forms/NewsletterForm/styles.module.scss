@@ -2,10 +2,8 @@
 @import 'styles/mixins';
 @import 'styles/media';
 
-.form {
-  @include tablet {
-    width: 264px;
-  }
+.field {
+  margin-bottom: 16px;
 }
 
 .title {

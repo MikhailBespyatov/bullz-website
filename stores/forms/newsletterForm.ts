@@ -7,13 +7,20 @@ interface FormRequest {
   email: string;
 }
 
+export enum NewsletterFormNames {
+  userName = 'userName',
+  email = 'email'
+}
+
+const { userName, email } = NewsletterFormNames;
+
 export const newsletterForm = createForm({
   fields: {
     userName: {
       init: '' as string,
       rules: [
         createRule<string>({
-          name: 'userName',
+          name: userName,
           schema: yupDefault
         })
       ]
@@ -22,7 +29,7 @@ export const newsletterForm = createForm({
       init: '' as string,
       rules: [
         createRule<string>({
-          name: 'userName',
+          name: email,
           schema: yupEmail
         })
       ],
