@@ -5,5 +5,8 @@ module.exports = {
       cwd: '~/application/bullz/bullz-site-dev',
       script: 'yarn',
       args: 'start',
+      exec_mode: 'cluster',
+      instances: 'max',
+      watch: ['next-env.d.ts'],
     },
 ],};
