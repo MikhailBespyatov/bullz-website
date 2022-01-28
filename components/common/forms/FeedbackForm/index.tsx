@@ -51,7 +51,9 @@ export const FeedbackForm: FC<ClassName> = ({ className }) => {
           error={!!checkboxErrors[0]}
           checked={checked}
         />
-        <Button type="submit">send now</Button>
+        <Button type="submit" uppercase rounded>
+          send now
+        </Button>
       </form>
     </div>
   );
