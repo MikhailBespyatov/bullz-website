@@ -17,7 +17,7 @@ export default function ForCreators() {
         <meta name="description" content="BULLZ website" />
       </Head>
       <MainLayout>
-        <Container className={styles.containerWidth}>
+        <Container>
           <Title type="h1" className={styles.title}>
             BULLZ <span className={styles.titleTextContainer}>for Creators.</span>
           </Title>
@@ -25,7 +25,7 @@ export default function ForCreators() {
             BULLZ IS A DEDICATED APP FOR SHARING YOUR CRYPTO RECOMMENDATIONS.
           </Paragraph>
         </Container>
-        <Container className={`${styles.contentContainer} ${styles.containerWidth}`}>
+        <Container className={styles.contentContainer}>
           <div className={styles.imageContainer}>
             <Image src={screen} alt="" />
           </div>

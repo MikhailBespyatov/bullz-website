@@ -1,22 +1,5 @@
 @import 'styles/media';
 
-.containerWidth {
-  max-width: 320px;
-  margin: auto;
-
-  @include tablet {
-    max-width: 768px;
-  }
-
-  @include laptop {
-    max-width: 1024px;
-  }
-
-  @include desktop {
-    max-width: 1440px;
-  }
-}
-
 .title {
   width: 240px;
   margin-top: 16px;
@@ -121,7 +104,7 @@
 }
 
 .textContainer{
-    width:100%;
+    width: 286px;
 
     @include tablet {
         width: 340px;
