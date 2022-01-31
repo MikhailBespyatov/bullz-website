@@ -1,0 +1,154 @@
+@import 'styles/media';
+
+.containerWidth {
+  max-width: 320px;
+  margin: auto;
+
+  @include tablet {
+    max-width: 768px;
+  }
+
+  @include laptop {
+    max-width: 1024px;
+  }
+
+  @include desktop {
+    max-width: 1440px;
+  }
+}
+
+.title {
+  width: 240px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+  @include tablet {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  @include laptop {
+    margin-top: 40px;
+  }
+
+  @include desktop {
+    margin-top: 43px;
+  }
+
+  @include big-screen {
+    margin-top: 90px;
+  }
+}
+
+.titleTextContainer {
+    color: $blue;
+
+    @include tablet {
+        display: block;
+      }
+}
+
+.paragraph {
+    width: 288px;
+    margin-bottom: 36px;
+
+    @include tablet {
+        width: 330px;
+        margin-left: 60px;
+        margin-bottom: 40px;
+      }
+
+      @include laptop {
+        width: 470px;
+        margin-left: 80px;
+        margin-bottom: 25px;
+      }
+
+      @include desktop {
+        margin-left: 90px;
+        margin-bottom: 45px;
+      }
+}
+
+.contentContainer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+
+    @include tablet {
+        flex-direction: row;
+        margin-bottom: 100px;
+    }
+
+    @include laptop {
+        align-items: center;
+        margin-bottom: 120px;
+    }
+
+    @include desktop {
+        margin-bottom: 140px;
+    }
+
+    @include big-screen {
+        margin-bottom: 160px;
+      }
+}
+
+.imageContainer{
+    max-width: 184px;
+    max-height: 368px;
+    margin-left: 30px;
+    margin-bottom: 36px;
+
+    @include tablet {
+        margin-bottom: 0;
+        margin-left: 130px;
+    }
+
+    @include laptop {
+        max-width: 246px;
+        max-height: 492px;
+        margin-left: 186px;
+    }
+
+    @include desktop {
+        max-width: 290px;
+        max-height: 578px;
+        margin-left: 180px;
+    }
+
+}
+
+.textContainer{
+    width:100%;
+
+    @include tablet {
+        width: 340px;
+        padding-left: 60px;
+    }
+
+    @include desktop {
+        width: 370px;
+        padding-left: 90px;
+    }
+
+}
+
+.contentParagraph {
+    width:100%;
+    margin-bottom: 30px;
+
+    @include tablet {
+        width: 190px;
+    }
+
+    @include laptop {
+        width: 280px;
+
+    }
+}
+
+.textColorBlue{
+    color: $blue;
+}
