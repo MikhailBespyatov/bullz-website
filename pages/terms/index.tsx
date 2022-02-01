@@ -5,7 +5,7 @@ import { Container } from 'components/common/wrappers/Container';
 import styles from './styles.module.scss';
 import Head from 'next/head';
 import React from 'react';
-import { contentTextArray } from './constants';
+import { contentTextArray } from '../../constants/termsPageContent';
 
 export default function Terms() {
   return (
