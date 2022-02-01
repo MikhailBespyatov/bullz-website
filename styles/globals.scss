@@ -8,6 +8,7 @@ body {
   font-family: $covik-sans-mono;
   background: $black;
   color: $white;
+  scroll-behavior: smooth;
 }
 
 a {

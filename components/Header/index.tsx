@@ -2,17 +2,27 @@ import bullzLogo from 'assets/images/bullz-logo.png';
 import cn from 'classnames';
 import { Container } from 'components/common/wrappers/Container';
 import { Socials } from 'components/Socials';
+import { useStore } from 'effector-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
+import { headerOpened, toggleHeader } from 'stores/header';
 import { navItems } from './constants';
 import styles from './styles.module.scss';
 
 export const Header = () => {
   const { pathname } = useRouter();
-  const [opened, setOpened] = useState(false);
-  const onBurgerButtonClick = () => setOpened(!opened);
+  const navIsOpened = useStore(headerOpened);
+  const onBurgerButtonClick = () => toggleHeader();
+
+  useEffect(() => {
+    const body = document.querySelector('body');
+
+    if (body) {
+      navIsOpened ? (body.style.overflow = 'hidden') : (body.style.overflow = 'auto');
+    }
+  }, [navIsOpened]);
 
   return (
     <header>
@@ -24,7 +34,7 @@ export const Header = () => {
         </Link>
         <div
           className={cn(styles.navAndSocialWrapper, {
-            [styles.navAndSocialWrapper_opened]: opened
+            [styles.navAndSocialWrapper_opened]: navIsOpened
           })}
         >
           <nav>
@@ -46,10 +56,10 @@ export const Header = () => {
         <button
           type="button"
           className={cn(styles.burgerButton, {
-            [styles.burgerButton_opened]: opened
+            [styles.burgerButton_opened]: navIsOpened
           })}
           onClick={onBurgerButtonClick}
-          aria-label={opened ? 'close main menu' : 'open main menu'}
+          aria-label={navIsOpened ? 'close main menu' : 'open main menu'}
         />
       </Container>
     </header>

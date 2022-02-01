@@ -74,6 +74,8 @@
   border-radius: 30px;
   background-color: $blue;
 
+  transition: background-color 0.3s;
+
   @include flexCenter;
   align-self: center;
 
@@ -88,5 +90,9 @@
     line-height: 24px;
 
     height: 52px;
+  }
+
+  &:hover {
+    background-color: $blue3;
   }
 }
