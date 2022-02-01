@@ -1,0 +1,9 @@
+@import 'styles/media';
+
+.main {
+  padding-top: 72px;
+
+  @include tablet {
+    padding-top: 0;
+  }
+}

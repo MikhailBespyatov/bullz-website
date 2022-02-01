@@ -3,7 +3,7 @@
 
 .wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 
   @include tablet {
     justify-content: flex-start;

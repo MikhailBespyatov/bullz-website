@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import Link from 'next/link';
-import { FC } from 'react';
-import { ClassName } from 'types';
+import { FC, ReactNode } from 'react';
+import { ClassName, noop } from 'types';
 import styles from './styles.module.scss';
 
 interface Props extends ClassName {
@@ -12,6 +12,8 @@ interface Props extends ClassName {
   rounded?: boolean;
   href?: string;
   variant?: 'primary' | 'secondary';
+  onClick?: noop;
+  icon?: ReactNode;
 }
 
 export const Button: FC<Props> = ({
@@ -19,11 +21,12 @@ export const Button: FC<Props> = ({
   disabled,
   className,
   type = 'button',
-  withArrow,
   uppercase,
   rounded,
   href,
-  variant = 'primary'
+  variant = 'primary',
+  onClick,
+  icon
 }) => {
   const buttonClasses = cn(
     styles.button,
@@ -35,27 +38,30 @@ export const Button: FC<Props> = ({
     className
   );
 
-  const spanClasses = cn(styles.content, { [cn(styles.arrow, styles[`arrow_${variant}`])]: withArrow });
+  const customIcon = icon && <div className={styles.icon}>{icon}</div>;
 
   const isExternalLink = href?.includes('http');
 
   if (href) {
     return isExternalLink ? (
-      <a className={buttonClasses} href={href} target="_blank" rel="noopener noreferrer">
-        <span className={spanClasses}>{children}</span>
+      <a className={buttonClasses} href={href} target="_blank" rel="noopener noreferrer" onClick={onClick}>
+        <span className={styles.content}>{children}</span>
+        {customIcon}
       </a>
     ) : (
       <Link href={href}>
-        <a className={buttonClasses}>
-          <span className={spanClasses}>{children}</span>
+        <a className={buttonClasses} onClick={onClick}>
+          <span className={styles.content}>{children}</span>
+          {customIcon}
         </a>
       </Link>
     );
   }
 
   return (
-    <button className={buttonClasses} disabled={disabled} type={type}>
-      <span className={spanClasses}>{children}</span>
+    <button className={buttonClasses} disabled={disabled} type={type} onClick={onClick}>
+      <span className={styles.content}>{children}</span>
+      {customIcon}
     </button>
   );
 };
