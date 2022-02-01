@@ -1,29 +1,31 @@
 @import 'styles/media';
 
+
 .container {
+  width: $mobile;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
 
   @include tablet {
+    width: $tablet;
     padding-left: 60px;
     padding-right: 60px;
   }
 
   @include laptop {
+    width: $laptop;
     padding-left: 100px;
     padding-right: 100px;
   }
 
   @include desktop {
+    width: $desktop;
     padding-left: 154px;
     padding-right: 154px;
   }
 
-  @include big-screen {
-    max-width: 1132px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 0;
-    padding-right: 0;
-  }
 }
+
+

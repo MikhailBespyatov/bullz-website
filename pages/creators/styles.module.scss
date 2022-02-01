@@ -54,7 +54,7 @@
       }
 }
 
-.contentContainer{
+.contentContainer {
     display: flex;
     flex-direction: column;
     margin-bottom: 80px;
@@ -78,7 +78,7 @@
       }
 }
 
-.imageContainer{
+.imageContainer {
     max-width: 184px;
     max-height: 368px;
     margin-left: 30px;
@@ -103,7 +103,7 @@
 
 }
 
-.textContainer{
+.textContainer {
     width: 286px;
 
     @include tablet {
@@ -132,6 +132,6 @@
     }
 }
 
-.textColorBlue{
+.textColorBlue {
     color: $blue;
 }

@@ -3,7 +3,7 @@ import { Title } from 'components/common/typography/Title';
 import { Container } from 'components/common/wrappers/Container';
 import styles from './styles.module.scss';
 import Head from 'next/head';
-import screen from 'assets/images/screen_for-creators-page.png';
+import screen from 'assets/images/screen-img_for-creators-page.png';
 import React from 'react';
 import Image from 'next/image';
 import { Paragraph } from 'components/common/typography/Paragraph';
