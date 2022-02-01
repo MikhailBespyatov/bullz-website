@@ -1,0 +1,34 @@
+.title {
+  margin-bottom: 40px;
+  padding-top: 80px;
+}
+
+.smallMargin {
+  margin-bottom: 8px;
+}
+
+.bigMargin {
+  margin-bottom: 30px;
+}
+
+.list {
+  margin-bottom: 16px;
+  position: relative;
+  padding-left: 30px;
+  &:before {
+    content: '';
+    position: absolute;
+    background-color: #37465a;
+    border-radius: 50%;
+    height: 6px;
+    width: 6px;
+    top: 8px;
+    left: 8px;
+  }
+}
+
+.numberList {
+  list-style-type: auto;
+  margin-bottom: 16px;
+  position: relative;
+}
