@@ -17,7 +17,7 @@ export default function ForCreators() {
         <meta name="description" content="BULLZ website" />
       </Head>
       <MainLayout>
-        <Container>
+        <Container className={styles.titleContainer}>
           <Title type="h1" className={styles.title}>
             BULLZ <span className={styles.titleTextContainer}>for Creators.</span>
           </Title>
