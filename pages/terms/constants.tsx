@@ -1,5 +1,3 @@
-import { Paragraph } from 'components/common/typography/Paragraph';
-
 export const contentTextArray = [
   {
     text: `Please read these Terms and Conditions (the “Terms”) and our Privacy Policy (“Privacy Policy”) carefully because they govern your (“you”) use of the BULLZ (“BULLZ”, “we”, “us” or “our”;
