@@ -7,3 +7,5 @@ export interface Id {
 }
 
 export type noop = () => void;
+
+export type MarginType = 'minor' | 'major';
