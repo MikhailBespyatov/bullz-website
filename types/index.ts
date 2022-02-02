@@ -8,4 +8,9 @@ export interface Id {
 
 export type noop = () => void;
 
+export interface ImageProps {
+  src: StaticImageData;
+  alt: string;
+}
+
 export type MarginType = 'minor' | 'major';

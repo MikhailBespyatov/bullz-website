@@ -11,6 +11,25 @@
     @include tablet {
       flex-direction: row-reverse;
     }
+
+    .image {
+      @include tablet {
+        margin-left: 0;
+        margin-right: 72px;
+      }
+
+      @include laptop {
+        margin-right: 44px;
+      }
+
+      @include desktop {
+        margin-right: 120px;
+      }
+
+      @include big-screen {
+        margin-right: 100px;
+      }
+    }
   }
 }
 
@@ -71,42 +90,22 @@
     width: 240px;
     flex-shrink: 0;
     margin-left: 72px;
-
-    &_reverse {
-      margin-left: 0;
-      margin-right: 72px;
-    }
   }
 
   @include laptop {
     width: 340px;
     margin-left: 44px;
-
-    &_reverse {
-      margin-left: 0;
-      margin-right: 44px;
-    }
   }
 
   @include desktop {
     width: 480px;
 
     margin-left: 120px;
-
-    &_reverse {
-      margin-left: 0;
-      margin-right: 120px;
-    }
   }
 
   @include big-screen {
     width: 540px;
 
     margin-left: 100px;
-
-    &_reverse {
-      margin-left: 0;
-      margin-right: 100px;
-    }
   }
 }
