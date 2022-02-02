@@ -12,3 +12,5 @@ export interface ImageProps {
   src: StaticImageData;
   alt: string;
 }
+
+export type MarginType = 'minor' | 'major';

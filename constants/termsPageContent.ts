@@ -1,4 +1,11 @@
-export const contentTextArray = [
+import { MarginType } from 'types';
+
+interface ContentTextArrayProps {
+  text: string;
+  margin?: MarginType;
+}
+
+export const contentTextArray: ContentTextArrayProps[] = [
   {
     text: `Please read these Terms and Conditions (the “Terms”) and our Privacy Policy (“Privacy Policy”) carefully because they govern your (“you”) use of the BULLZ (“BULLZ”, “we”, “us” or “our”;
     herein including affiliates of BULLZ in providing the Services) website BULLZ.COM (“Site”), and our mobile applications (“Apps”), and our content accessible via our Site and App.

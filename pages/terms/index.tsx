@@ -23,9 +23,8 @@ export default function Terms() {
 
         <Container className={styles.textContainer}>
           {contentTextArray.map(({ text, margin }) => {
-            const paragraphClassName = margin === 'minor' ? styles.marginMinor : styles.marginMajor;
             return (
-              <Paragraph type="covic-semi-bold" className={paragraphClassName} key={text.substring(10, 21)}>
+              <Paragraph type="covic-semi-bold" marginType={margin} key={text.substring(10, 21)}>
                 {text}
               </Paragraph>
             );
