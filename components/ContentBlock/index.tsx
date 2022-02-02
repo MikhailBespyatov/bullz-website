@@ -1,10 +1,9 @@
-import arrowIcon from 'assets/icons/arrow-icon-white.svg';
 import cn from 'classnames';
 import { Button } from 'components/common/buttons/Button';
+import { ArrowIcon } from 'components/common/icons/ArrowIcon';
 import { ResponsiveImage } from 'components/common/images/ResponsiveImage';
 import { Paragraph } from 'components/common/typography/Paragraph';
 import { Title } from 'components/common/typography/Title';
-import Image from 'next/image';
 import { FC } from 'react';
 import styles from './styles.module.scss';
 
@@ -15,7 +14,7 @@ interface Props {
   additionalText?: string;
   titleText: string;
   paragraphText: string;
-  buttonText: string;
+  buttonText?: string;
   onButtonClick?: () => void;
   reverse?: boolean;
 }
@@ -40,18 +39,14 @@ export const ContentBlock: FC<Props> = ({
         {titleText}
       </Title>
       <Paragraph className={styles.paragraph}>{paragraphText}</Paragraph>
-      <Button
-        variant="secondary"
-        href={href}
-        className={styles.button}
-        onClick={onButtonClick}
-        icon={<Image src={arrowIcon} alt="arrow icon" />}
-      >
-        {buttonText}
-      </Button>
+      {buttonText && (
+        <Button variant="secondary" href={href} className={styles.button} onClick={onButtonClick} icon={<ArrowIcon />}>
+          {buttonText}
+        </Button>
+      )}
     </div>
     {src && alt && (
-      <div className={cn(styles.image, { [styles.image_reverse]: reverse })}>
+      <div className={styles.image}>
         <ResponsiveImage src={src} alt={alt} />
       </div>
     )}

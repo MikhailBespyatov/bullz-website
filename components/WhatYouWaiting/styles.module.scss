@@ -1,0 +1,28 @@
+@import 'styles/media';
+@import 'styles/mixins';
+
+.title {
+  margin-bottom: 16px;
+
+  @include tablet {
+    margin-bottom: 30px;
+  }
+}
+
+.formWrapper {
+  @include flexCenter;
+}
+
+.form {
+  @include tablet {
+    width: 464px;
+  }
+
+  @include laptop {
+    width: 680px;
+  }
+
+  @include desktop {
+    width: 800px;
+  }
+}

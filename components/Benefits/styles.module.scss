@@ -1,0 +1,82 @@
+@import 'styles/variables';
+@import 'styles/media';
+
+.listWrapper {
+  background-color: $blue;
+  padding: 12px 6px;
+
+  @include tablet {
+    padding: 20px 24px;
+  }
+
+  @include laptop {
+    padding: 40px 52px;
+  }
+}
+
+.list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  margin-top: -16px;
+  margin-left: -12px;
+
+  @include tablet {
+    margin-left: 0;
+    margin-top: -30px;
+  }
+
+  @include laptop {
+    margin-top: -40px;
+  }
+
+  @include desktop {
+    margin-top: -60px;
+  }
+}
+
+.listItem {
+  font-family: $covik-sans-mono;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  word-wrap: break-word;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  width: calc(50% - 12px);
+
+  margin-top: 16px;
+  margin-left: 12px;
+
+  @include tablet {
+    width: 33%;
+
+    margin-left: 0;
+    margin-top: 30px;
+  }
+
+  @include laptop {
+    margin-top: 40px;
+  }
+
+  @include desktop {
+    margin-top: 60px;
+  }
+}
+
+.title {
+  margin-bottom: 16px;
+
+  @include tablet {
+    margin-bottom: 30px;
+  }
+}
+
+.icon {
+  margin-bottom: 16px;
+}

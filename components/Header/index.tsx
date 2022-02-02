@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
-import { headerOpened, toggleHeader } from 'stores/header';
+import { closeHeader, headerOpened, toggleHeader } from 'stores/header';
 import { navItems } from './constants';
 import styles from './styles.module.scss';
 
@@ -20,13 +20,13 @@ export const Header = () => {
     const body = document.querySelector('body');
 
     if (body) {
-      navIsOpened ? (body.style.overflow = 'hidden') : (body.style.overflow = 'auto');
+      body.style.overflow = navIsOpened ? 'hidden' : 'auto';
     }
   }, [navIsOpened]);
 
   return (
-    <header>
-      <Container className={styles.wrapper}>
+    <header className={styles.header}>
+      <Container className={styles.contentContainer}>
         <Link href="/">
           <a className={styles.logoWrapper} aria-label="go to main page">
             <Image src={bullzLogo} alt="bullz website logo" />
@@ -44,6 +44,7 @@ export const Header = () => {
                   className={cn(styles.navItem, {
                     [styles.navItem_active]: href === pathname
                   })}
+                  onClick={() => closeHeader()}
                 >
                   {title}
                 </a>
