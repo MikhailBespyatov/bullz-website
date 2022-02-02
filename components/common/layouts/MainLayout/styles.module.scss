@@ -2,8 +2,15 @@
 
 .main {
   padding-top: 72px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   @include tablet {
     padding-top: 0;
   }
+}
+
+.content {
+  flex: 1;
 }
