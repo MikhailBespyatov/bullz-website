@@ -1,0 +1,37 @@
+@import 'styles/media';
+
+.textContainer {
+  padding-top: 36px;
+  padding-bottom: 40px;
+
+  @include tablet {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include laptop {
+    padding-bottom: 80px;
+  }
+
+  @include desktop {
+    padding-bottom: 100px;
+  }
+
+  @include big-screen {
+    padding-bottom: 120px;
+  }
+}
+
+.titleFirstLineContainer {
+  color: $blue;
+  display: block;
+  white-space: nowrap;
+}
+
+.marginMajor {
+  margin-bottom: 40px;
+}
+
+.marginMinor {
+  margin-bottom: 8px;
+}
