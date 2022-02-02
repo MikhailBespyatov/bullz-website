@@ -1,18 +1,24 @@
 @import 'styles/variables';
 @import 'styles/media';
 
-.wrapper {
+.contentContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 56px;
+
+  @include tablet {
+    height: auto;
+  }
+}
+
+.header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-
-  height: 56px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
   background-color: $black;
 
@@ -67,14 +73,16 @@
 }
 
 .navAndSocialWrapper {
+  width: $mobile;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px;
+
   position: fixed;
   top: 46px;
   left: 0;
   right: 0;
   bottom: 0;
-  padding-top: 16px;
-  padding-left: 36px;
-  padding-right: 36px;
   background-color: $black;
   transform: translateX(-140%);
   transition: transform 0.4s;
@@ -93,10 +101,9 @@
     justify-content: space-between;
     align-items: center;
 
-    padding-top: 0;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
 
+    margin-right: 0;
     margin-left: 30px;
   }
 

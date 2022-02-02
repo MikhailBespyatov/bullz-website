@@ -1,0 +1,56 @@
+@import 'styles/media';
+
+.contentWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  word-wrap: break-word;
+
+  @include tablet {
+    word-wrap: normal;
+
+    width: 80%;
+  }
+}
+
+.paragraph {
+  margin-bottom: 30px;
+  margin-top: 16px;
+}
+
+.imageMobile {
+  margin-bottom: 20px;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.imageTablet {
+  display: none;
+
+  @include tablet {
+    display: block;
+
+    width: 240px;
+    flex-shrink: 0;
+
+    margin-left: 72px;
+  }
+
+  @include laptop {
+    width: 340px;
+  }
+
+  @include desktop {
+    width: 480px;
+    margin-left: 180px;
+  }
+
+  @include big-screen {
+    width: 540px;
+    margin-left: 120px;
+  }
+}
