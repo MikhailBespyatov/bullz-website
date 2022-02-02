@@ -1,0 +1,29 @@
+@import 'styles/media';
+
+.text {
+  margin-bottom: 30px;
+}
+
+.list {
+  display: flex;
+  margin-bottom: 12px;
+  padding-left: 0;
+
+  @include tablet {
+    margin-bottom: 16px;
+    padding-left: 10px;
+  }
+
+  @include laptop {
+    padding-left: 16px;
+  }
+}
+
+.item {
+  list-style-type: auto;
+  margin-left: 16px;
+}
+
+.value {
+  color: #37465a;
+}

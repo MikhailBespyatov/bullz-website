@@ -1,20 +1,41 @@
+@import 'styles/media';
+
 .title {
-  margin-bottom: 40px;
-  padding-top: 80px;
+  margin-bottom: 36px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
 }
 
 .smallMargin {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+
+  @include tablet {
+    margin-bottom: 8px;
+  }
 }
 
 .bigMargin {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
+
+  @include tablet {
+    margin-bottom: 30px;
+  }
+}
+
+.largeMargin {
+  margin-bottom: 36px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
 }
 
 .list {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   position: relative;
-  padding-left: 30px;
+  padding-left: 32px;
   &:before {
     content: '';
     position: absolute;
@@ -24,11 +45,16 @@
     width: 6px;
     top: 8px;
     left: 8px;
+
+    @include tablet {
+      left: 10px;
+    }
+  }
+  @include laptop {
+    padding-left: 36px;
   }
 }
 
-.numberList {
-  list-style-type: auto;
-  margin-bottom: 16px;
-  position: relative;
+.margin {
+  margin-bottom: 120px;
 }

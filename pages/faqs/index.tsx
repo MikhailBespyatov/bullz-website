@@ -5,6 +5,19 @@ import { Container } from 'components/common/wrappers/Container';
 import styles from './styles.module.scss';
 import Head from 'next/head';
 import React from 'react';
+import { Subtitle } from 'components/common/typography/Subtitle';
+import {
+  InfoTextFive,
+  InfoTextFour,
+  InfoListOne,
+  InfoListTwo,
+  InfoTextOne,
+  InfoTextThree,
+  InfoTextTwo,
+  InfoTextSix,
+  InfoTextSeven
+} from 'components/InfoText/constants';
+import { InfoList, InfoText } from 'components/InfoText';
 
 export default function Faqs() {
   return (
@@ -14,39 +27,19 @@ export default function Faqs() {
         <meta name="description" content="BULLZ website" />
       </Head>
       <MainLayout>
-        <Container>
+        <Container className={styles.margin}>
           <Title type="h1" className={styles.title}>
             FAQs
           </Title>
-          <Title type="h3" className={styles.smallMargin}>
-            What is BULLZ?
-          </Title>
+          <Subtitle>What is BULLZ?</Subtitle>
+          {InfoTextOne.map(props => (
+            <InfoText key={props.text} {...props} />
+          ))}
+          <Subtitle className={styles.smallMargin}>How are recommendations on BULLZ authenticated?</Subtitle>
+          {InfoTextTwo.map(props => (
+            <InfoText key={props.text} {...props} />
+          ))}
           <Paragraph type="covic-semi-bold">
-            <p className={styles.bigMargin}>
-              The BULLZ app is a social recommendation platform dedicated to crypto and blockchain. The crypto space is
-              full of misinformation with countless Telegram groups, tokens, projects, exchanges, and airdrops popping
-              up every day. Finding the real projects can be tough and discouraging.
-            </p>
-            <p className={styles.bigMargin}>
-              BULLZ cuts through the bull by providing trusted, authenticated community information and education about
-              projects, tokens, exchanges, events, and everything else crypto.
-            </p>
-            <p className={styles.bigMargin}>
-              Additionally, creators earn WOM Tokens--the WOM Protocol native token--based on the engagement with their
-              recommendations.
-            </p>
-          </Paragraph>
-          <Title type="h3" className={styles.smallMargin}>
-            How are recommendations on BULLZ authenticated?
-          </Title>
-          <Paragraph type="covic-semi-bold">
-            <p className={styles.bigMargin}>
-              BULLZ uses the WOM Protocol to peer-review and authenticate every recommendation video on BULLZ. No shills
-              allowed!
-            </p>
-            <p className={styles.bigMargin}>
-              WOM Authenticators rate each recommendation based on the following criteria:
-            </p>
             <p className={styles.list}>Authenticity: Is the recommendation honest, reliable, and trustworthy?</p>
             <p className={styles.list}>
               Creativity: Did the creator put effort and creativity into a unique recommendation?
@@ -54,38 +47,66 @@ export default function Faqs() {
             <p className={styles.list}>
               Positivity: Does the recommendation show the product in a positive light and create desire?
             </p>
-            <p className={styles.bigMargin}>
-              Recommendations that pass authentication can earn WOM Tokens. Check out this link to learn more about how
-              WOM Protocol authentication works.
-            </p>
           </Paragraph>
-          <Title type="h3" className={styles.bigMargin}>
-            Video Creation
-          </Title>
-          <Title type="h3" className={styles.smallMargin}>
-            How do I create a recommendation video?
-          </Title>
-          <Paragraph>
-            <p className={styles.bigMargin}>
-              You can record videos directly in the BULLZ app using the in-app video recording and editing tools. Simply
-              tap on the camera icon and get started! Alternatively, you can upload pre-recorded videos from your phone
-              to the BULLZ app as well.
-            </p>
-            <p className={styles.bigMargin}>
-              After you record or upload your video you will be prompted to add the following:
-            </p>
-            <ul>
-              <li className={styles.numberList}>The topic of your video (e.g. Metamask or Coinbase Rewards)</li>
-              <li className={styles.numberList}>
-                The brand or company that created what you recommend (e.g. ConsenSys or Coinbase)
-              </li>
-              <li className={styles.numberList}>
-                A URL (e.g. https://metamask.io/ or https://www.coinbase.com/rewards))
-              </li>
-              <li className={styles.numberList}>Hashtags</li>
-              <li className={styles.numberList}>The spoken language in the video</li>
-            </ul>
+          <Paragraph className={styles.bigMargin}>
+            Recommendations that pass authentication can earn WOM Tokens. Check out this link to learn more about how
+            WOM Protocol authentication works.
           </Paragraph>
+          <Subtitle className={styles.bigMargin}>Video Creation</Subtitle>
+          <Subtitle className={styles.smallMargin}>How do I create a recommendation video?</Subtitle>
+          {InfoTextThree.map(props => (
+            <InfoText key={props.text} {...props} />
+          ))}
+          {InfoListOne.map(props => (
+            <InfoList key={props.item} {...props} />
+          ))}
+          <Paragraph className={styles.bigMargin}>
+            The final step is to stake WOM Tokens for your video to be authenticated and for the potential to earn WOM
+            Tokens.
+          </Paragraph>
+          <Subtitle className={styles.smallMargin}>How long does my video need to be?</Subtitle>
+          <Paragraph className={styles.bigMargin}>
+            There is no minimum time requirement for your video. However, we recommend recording videos between 30-60
+            seconds in length to give yourself time to properly cover the topic.
+          </Paragraph>
+          <Subtitle className={styles.smallMargin}>What audio can I use in my video?</Subtitle>
+          <Paragraph className={styles.bigMargin}>
+            You can use whatever audio you record and own. Any videos with copyrighted music will be removed.
+          </Paragraph>
+          <Subtitle className={styles.bigMargin}>WOM Rewards</Subtitle>
+          <Subtitle className={styles.smallMargin}>How do I earn rewards for my recommendations?</Subtitle>
+          {InfoTextFour.map(props => (
+            <InfoText key={props.text} {...props} />
+          ))}
+          <Subtitle className={styles.smallMargin}>When do I earn rewards for my recommendations?</Subtitle>
+          <Paragraph className={styles.bigMargin}>
+            After your video passes authentication it is immediately eligible to start earning. Rewards are emitted
+            daily with a few days’ delay for accounting reasons.
+          </Paragraph>
+          <Subtitle className={styles.smallMargin}>Where are my WOM Tokens?</Subtitle>
+          {InfoTextFive.map(props => (
+            <InfoText key={props.text} {...props} />
+          ))}
+          <Subtitle className={styles.smallMargin}>How much WOM can I earn?</Subtitle>
+          <Paragraph className={styles.bigMargin}>
+            There is a set daily amount of WOM Tokens rewarded each day in the WOM Ecosystem. How much you earn depends
+            on a variety of factors including the authentication rating on your video and the engagement with your
+            videos (likes, comments, shares, etc.).
+          </Paragraph>
+          <Subtitle className={styles.smallMargin}>What can I do with WOM Tokens?</Subtitle>
+          <Paragraph className={styles.bigMargin}>You can do a number of different things with WOM Tokens:</Paragraph>
+          {InfoListTwo.map(props => (
+            <InfoList key={props.item} {...props} />
+          ))}
+          <Subtitle className={styles.smallMargin}>Why does my wallet balance keep changing?</Subtitle>
+          {InfoTextSix.map(props => (
+            <InfoText key={props.text} {...props} />
+          ))}
+          <Subtitle className={styles.largeMargin}>Etc.</Subtitle>
+          <Subtitle className={styles.smallMargin}>How do I get verified?</Subtitle>
+          {InfoTextSeven.map(props => (
+            <InfoText key={props.text} {...props} />
+          ))}
         </Container>
       </MainLayout>
     </div>
