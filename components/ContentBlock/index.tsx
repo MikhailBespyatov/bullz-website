@@ -5,9 +5,10 @@ import { ResponsiveImage } from 'components/common/images/ResponsiveImage';
 import { Paragraph } from 'components/common/typography/Paragraph';
 import { Title } from 'components/common/typography/Title';
 import { FC } from 'react';
+import { ClassName } from 'types';
 import styles from './styles.module.scss';
 
-interface Props {
+interface Props extends ClassName {
   href?: string;
   src?: StaticImageData;
   alt?: string;
@@ -28,9 +29,10 @@ export const ContentBlock: FC<Props> = ({
   paragraphText,
   buttonText,
   onButtonClick,
-  reverse
+  reverse,
+  className
 }) => (
-  <div className={cn(styles.container, { [styles.container_reverse]: reverse })}>
+  <div className={cn(styles.container, { [styles.container_reverse]: reverse }, className)}>
     <div className={styles.content}>
       <Title type="h5" color="white" className={styles.additionalText}>
         {additionalText}
@@ -38,7 +40,9 @@ export const ContentBlock: FC<Props> = ({
       <Title type="h2" className={styles.title}>
         {titleText}
       </Title>
-      <Paragraph className={styles.paragraph}>{paragraphText}</Paragraph>
+      <Paragraph type="gothic" className={styles.paragraph}>
+        {paragraphText}
+      </Paragraph>
       {buttonText && (
         <Button variant="secondary" href={href} className={styles.button} onClick={onButtonClick} icon={<ArrowIcon />}>
           {buttonText}

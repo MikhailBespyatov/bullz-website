@@ -12,7 +12,7 @@ export const UltimateBlock = () => (
       <Title type="h1" className={styles.title}>
         The ultimate source for everything crypto
       </Title>
-      <Paragraph className={styles.paragraph}>
+      <Paragraph type="gothic" className={styles.paragraph}>
         BULLZ is your home for everything crypto. Make, view, and use authentic recommendations about #NFTs, #DeFi,
         $crypto, and more!
       </Paragraph>
