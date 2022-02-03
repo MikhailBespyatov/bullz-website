@@ -4,7 +4,7 @@ interface ContentTextArrayProps {
   text: string;
   margin?: MarginType;
 }
-
+//TODO create HTML file with content for back end
 export const contentTextArray: ContentTextArrayProps[] = [
   {
     text: `1. Introduction`,
