@@ -11,6 +11,7 @@ export const content = `
 <br />
 <br />
   Additionally, creators earn WOM Tokens--the WOM Protocol native token--based on the engagement with their recommendations.
+</p>
 
 <h3>
   How are recommendations on BULLZ authenticated?
@@ -86,7 +87,8 @@ export const content = `
   In the last step before you submit your video you will be prompted to stake WOM. When you stake, your recommendation goes to the WOM Authenticator and if your video passes authentication, you can start earning WOM Tokens.
 <br />
 <br />
-  You earn WOM Tokens based on the daily engagement with your recommendation in relation to the other recommendations in the WOM Ecosystem. The better your recommendation performs compared to other recommendations each day, the more WOM you earn each day.</p>
+  You earn WOM Tokens based on the daily engagement with your recommendation in relation to the other recommendations in the WOM Ecosystem. The better your recommendation performs compared to other recommendations each day, the more WOM you earn each day.
+</p>
 
 <h3>
   When do I earn rewards for my recommendations?
