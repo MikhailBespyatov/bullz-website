@@ -1,0 +1,114 @@
+@import 'styles/variables';
+@import 'styles/media';
+
+.title {
+  margin-bottom: 16px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+
+  @include laptop {
+    margin-bottom: 60px;
+  }
+}
+
+.list {
+  @include laptop {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.listItem {
+  margin-bottom: 16px;
+
+  @include tablet {
+    margin-bottom: 30px;
+  }
+
+  @include laptop {
+    width: 360px;
+  }
+
+  @include desktop {
+    width: 496px;
+    margin-bottom: 40px;
+  }
+}
+
+.secondTitle {
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: $blue;
+
+  &_white {
+    color: $white;
+  }
+
+  @include tablet {
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  @include laptop {
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  @include desktop {
+    margin-bottom: 30px;
+  }
+}
+
+.description {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  text-transform: uppercase;
+
+  @include laptop {
+    text-transform: none;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  @include desktop {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  &_withMargin {
+    margin-bottom: 16px;
+
+    @include tablet {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.choose {
+  padding: 16px;
+  background-color: $blue;
+
+  @include tablet {
+    padding: 30px;
+  }
+
+  @include laptop {
+    width: 760px;
+    padding: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include desktop {
+    width: 800px;
+    padding: 44px 60px;
+  }
+}

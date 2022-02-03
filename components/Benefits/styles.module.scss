@@ -5,12 +5,20 @@
   background-color: $blue;
   padding: 12px 6px;
 
+  &_transparent {
+    background-color: transparent;
+  }
+
   @include tablet {
     padding: 20px 24px;
   }
 
   @include laptop {
     padding: 40px 52px;
+  }
+
+  &_withoutPadding {
+    padding: 0;
   }
 }
 

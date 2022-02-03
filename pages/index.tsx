@@ -44,7 +44,7 @@ export default function Home() {
 
         <Ticker className={styles.block}>Promote to earn Promote to earn </Ticker>
 
-        <Container className={styles.block}>
+        <Container>
           <ContentBlock
             additionalText="Our Assets"
             titleText="BULLZ web recorder"
@@ -55,10 +55,9 @@ export default function Home() {
             src={webRecorderImage}
             alt="web recorder"
             href={webRecorderLink}
+            className={styles.block}
           />
-        </Container>
 
-        <Container className={styles.block}>
           <ContentBlock
             additionalText="Boost you reach"
             titleText="BULLZ Influencers"
@@ -70,10 +69,9 @@ export default function Home() {
             alt="influencers"
             reverse
             href={forProjectsLink}
+            className={styles.block}
           />
-        </Container>
 
-        <Container className={styles.block}>
           <ContentBlock
             additionalText="The Blockchain"
             titleText="WOM Protocol"
@@ -82,6 +80,7 @@ export default function Home() {
             their videos and ratings."
             buttonText="Learn more about WOM"
             href={termsAndConditionLink}
+            className={styles.block}
           />
         </Container>
       </MainLayout>
