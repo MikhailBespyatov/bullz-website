@@ -2,47 +2,6 @@
 @import 'styles/media';
 
 .content {
-  margin-bottom: 80px;
-
-  @include tablet {
-    margin-bottom: 100px;
-  }
-
-  @include laptop {
-    margin-bottom: 120px;
-  }
-
-  @include desktop {
-    margin-bottom: 140px;
-  }
-
-  @include big-screen {
-    margin-bottom: 160px;
-  }
-
-  h1 {
-    margin-bottom: 36px;
-    font-family: $htw-unit-gothic;
-    font-size: 30px;
-    line-height: 40px;
-    color: $blue;
-
-    @include tablet {
-      margin-bottom: 40px;
-      font-size: 42px;
-      line-height: 52px;
-    }
-
-    @include laptop {
-      font-size: 50px;
-    }
-
-    @include desktop {
-      font-size: 60px;
-      line-height: 60px;
-    }
-  }
-
   h3 {
     margin-bottom: 6px;
     font-family: $covik-sans-mono;
@@ -84,28 +43,37 @@
     }
   }
 
+  ol,
   ul {
     margin-bottom: 24px;
-    padding-left: 32px;
     li {
-      margin-bottom: 12px;
-      font-family: $covik-sans-mono;
-      list-style-type: disc;
       font-size: 14px;
       line-height: 22px;
+      font-family: $covik-sans-mono;
+      margin-bottom: 12px;
 
       @include tablet {
         margin-bottom: 16px;
       }
 
       @include laptop {
-        margin-bottom: 22px;
         font-size: 16px;
       }
 
       @include desktop {
         font-size: 20px;
         line-height: 28px;
+      }
+    }
+  }
+
+  ul {
+    padding-left: 32px;
+    li {
+      list-style-type: disc;
+
+      @include laptop {
+        margin-bottom: 22px;
       }
     }
 
@@ -119,45 +87,26 @@
   }
 
   ol {
-    margin-bottom: 24px;
     padding-left: 20px;
     li {
-      margin-bottom: 12px;
       padding-left: 16px;
-      font-family: $covik-sans-mono;
       list-style-type: auto;
-      font-size: 14px;
-      line-height: 22px;
-
-      @include tablet {
-        margin-bottom: 16px;
-      }
-
-      @include laptop {
-        font-size: 16px;
-      }
-
-      @include desktop {
-        font-size: 20px;
-        line-height: 28px;
-      }
     }
 
     @include tablet {
-      margin-bottom: 30px;
       padding-left: 30px;
     }
 
-    @include laptop {
-      padding-left: 38px;
+    @include desktop {
+      padding-left: 40px;
     }
   }
+}
 
-  a {
-    transition: color 0.3s;
-    cursor: pointer;
-    &:hover {
-      color: $blue;
-    }
+.title {
+  margin-bottom: 36px;
+
+  @include tablet {
+    margin-bottom: 40px;
   }
 }
