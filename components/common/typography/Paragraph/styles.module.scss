@@ -1,7 +1,6 @@
 @import 'styles/variables';
 @import 'styles/media';
 
-
 .paragraph {
   font-family: $covik-sans-mono;
   font-size: 14px;
@@ -32,6 +31,12 @@
       line-height: 28px;
     }
   }
+
+  &_marginBottom_minor {
+    margin-bottom: 8px;
+  }
+
+  &_marginBottom_major {
+    margin-bottom: 40px;
+  }
 }
-
-
