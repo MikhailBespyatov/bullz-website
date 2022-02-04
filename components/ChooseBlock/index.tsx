@@ -8,9 +8,9 @@ import styles from './styles.module.scss';
 
 export const ChooseBlock: FC<ClassName> = ({ className }) => (
   <Container className={className}>
-    <Title type="h5" color="white" className={styles.title}>
+    <h2 className={styles.title}>
       <span className={styles.titleTextContainer}>choose who you want to be</span>
-    </Title>
+    </h2>
     <div className={styles.cardsWrapper}>
       {chooseBlockItems.map(props => (
         <ChooseCard key={props.href} {...props} />

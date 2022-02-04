@@ -8,7 +8,6 @@ import { forProjectsBenefitsItems } from 'constants/benefits';
 import { influencerBlocksItems } from 'constants/blocks';
 import Head from 'next/head';
 import React from 'react';
-import styles from './styles.module.scss';
 
 export default function ForProjects() {
   return (
@@ -19,15 +18,15 @@ export default function ForProjects() {
       </Head>
       <MainLayout>
         <Container>
-          <SparkBlock className={styles.block} />
+          <SparkBlock className="block" />
 
           {influencerBlocksItems.map(item => (
-            <ContentBlock key={item.titleText} className={styles.block} {...item} />
+            <ContentBlock key={item.titleText} className="block" {...item} />
           ))}
 
-          <Benefits items={forProjectsBenefitsItems} className={styles.block} />
+          <Benefits items={forProjectsBenefitsItems} className="block" />
 
-          <WhatYouWaiting className={styles.block} />
+          <WhatYouWaiting className="block" />
         </Container>
       </MainLayout>
     </div>

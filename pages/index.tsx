@@ -1,6 +1,6 @@
-import influencersImage from 'assets/images/influencers.jpg';
-import webRecorderImage from 'assets/images/web-recorder.jpg';
-import whatIsBullzImage from 'assets/images/what-is-bullz.jpg';
+import influencersImage from 'assets/images/influencers.webp';
+import webRecorderImage from 'assets/images/web-recorder.webp';
+import whatIsBullzImage from 'assets/images/what-is-bullz.webp';
 import { ChooseBlock } from 'components/ChooseBlock';
 import { MainLayout } from 'components/common/layouts/MainLayout';
 import { Container } from 'components/common/wrappers/Container';
@@ -11,7 +11,6 @@ import { termsAndConditionLink } from 'constants/externalLinks/constants';
 import { forProjectsLink, webRecorderLink } from 'constants/routes';
 import Head from 'next/head';
 import { scrollTop } from 'utils';
-import styles from './styles.module.scss';
 
 export default function Home() {
   return (
@@ -21,15 +20,15 @@ export default function Home() {
         <meta name="description" content="BULLZ website" />
       </Head>
       <MainLayout>
-        <Container className={styles.block}>
+        <Container className="block">
           <UltimateBlock />
         </Container>
 
-        <Ticker className={styles.block}>#farming #daos #wallets #nfts #blockchain #defi #crypto #altcoins</Ticker>
+        <Ticker className="block">#farming #daos #wallets #nfts #blockchain #defi #crypto #altcoins</Ticker>
 
-        <ChooseBlock className={styles.block} />
+        <ChooseBlock className="block" />
 
-        <Container className={styles.block}>
+        <Container className="block">
           <ContentBlock
             titleText="What is BULLZ?"
             paragraphText="Tap into the extensive BULLZ influencer network that covers all things crypto. Their recommendations for
@@ -42,7 +41,7 @@ export default function Home() {
           />
         </Container>
 
-        <Ticker className={styles.block}>Promote to earn Promote to earn </Ticker>
+        <Ticker className="block">Promote to earn Promote to earn </Ticker>
 
         <Container>
           <ContentBlock
@@ -55,7 +54,7 @@ export default function Home() {
             src={webRecorderImage}
             alt="web recorder"
             href={webRecorderLink}
-            className={styles.block}
+            className="block"
           />
 
           <ContentBlock
@@ -69,7 +68,7 @@ export default function Home() {
             alt="influencers"
             reverse
             href={forProjectsLink}
-            className={styles.block}
+            className="block"
           />
 
           <ContentBlock
@@ -80,7 +79,7 @@ export default function Home() {
             their videos and ratings."
             buttonText="Learn more about WOM"
             href={termsAndConditionLink}
-            className={styles.block}
+            className="block"
           />
         </Container>
       </MainLayout>

@@ -4,7 +4,7 @@ import { ClassName } from 'types';
 import styles from './styles.module.scss';
 
 interface Props extends ClassName {
-  type: keyof Pick<JSX.IntrinsicElements, 'h1' | 'h2' | 'h3' | 'h5'>;
+  type: keyof Pick<JSX.IntrinsicElements, 'h1' | 'h2' | 'h3' | 'h4'>;
   color?: 'white';
 }
 

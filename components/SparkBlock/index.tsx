@@ -1,4 +1,4 @@
-import influencersImage from 'assets/images/influencers.jpg';
+import influencersImage from 'assets/images/influencers.webp';
 import { Button } from 'components/common/buttons/Button';
 import { ArrowIcon } from 'components/common/icons/ArrowIcon';
 import { ResponsiveImage } from 'components/common/images/ResponsiveImage';
