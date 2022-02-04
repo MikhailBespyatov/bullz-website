@@ -9,7 +9,7 @@ import { contentTextArray } from 'constants/privacyPageContent';
 
 export default function Privacy() {
   return (
-    <div>
+    <>
       <Head>
         <title>BULLZ</title>
         <meta name="description" content="BULLZ website" />
@@ -29,6 +29,6 @@ export default function Privacy() {
           })}
         </Container>
       </MainLayout>
-    </div>
+    </>
   );
 }
