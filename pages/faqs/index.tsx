@@ -4,7 +4,6 @@ import { ContentBlockHtml } from 'components/ContentBlockHtml';
 import { content } from 'constants/faqsPageContent';
 import Head from 'next/head';
 import React from 'react';
-import styles from './styles.module.scss';
 
 export default function Faqs() {
   return (
@@ -15,7 +14,7 @@ export default function Faqs() {
       </Head>
       <MainLayout>
         <Container>
-          <ContentBlockHtml title="FAQs" content={content} className={styles.content} />
+          <ContentBlockHtml title="FAQs" content={content} className="block" />
         </Container>
       </MainLayout>
     </div>

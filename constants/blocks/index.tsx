@@ -1,7 +1,7 @@
-import cryptoRewardsImage from 'assets/images/crypto-rewards.jpg';
-import superChargedImage from 'assets/images/super-charged.jpg';
-import topInfluencersImage from 'assets/images/top-influencers.jpg';
-import topPowerImage from 'assets/images/top-power.jpg';
+import cryptoRewardsImage from 'assets/images/crypto-rewards.webp';
+import superChargedImage from 'assets/images/super-charged.webp';
+import topInfluencersImage from 'assets/images/top-influencers.webp';
+import topPowerImage from 'assets/images/top-power.webp';
 import { webRecorderLink } from 'constants/routes';
 
 export const influencerBlocksItems = [

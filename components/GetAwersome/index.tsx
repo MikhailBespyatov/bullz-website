@@ -1,4 +1,4 @@
-import webRecorderImage from 'assets/images/web-recorder.jpg';
+import webRecorderImage from 'assets/images/web-recorder.webp';
 import { ResponsiveImage } from 'components/common/images/ResponsiveImage';
 import { Paragraph } from 'components/common/typography/Paragraph';
 import { Title } from 'components/common/typography/Title';

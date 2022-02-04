@@ -17,7 +17,7 @@ export const NewsletterForm: FC<ClassName> = ({ className }) => {
 
   return (
     <>
-      <h5 className={styles.title}>Sign Up for our Newsletter:</h5>
+      <h2 className={styles.title}>Sign Up for our Newsletter:</h2>
 
       <form className={className} onSubmit={onSubmit} noValidate>
         {newsletterFormFields.map(item => {

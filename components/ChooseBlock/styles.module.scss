@@ -1,7 +1,12 @@
 @import 'styles/media';
+@import 'styles/variables';
 
 .title {
+  font-family: $htw-unit-gothic;
   margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
 }
 
 .titleTextContainer {

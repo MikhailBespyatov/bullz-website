@@ -1,4 +1,4 @@
-import phoneInHandImage from 'assets/images/phone-in-hand.jpg';
+import phoneInHandImage from 'assets/images/phone-in-hand.webp';
 import { NewsletterForm } from 'components/common/forms/NewsletterForm';
 import { ResponsiveImage } from 'components/common/images/ResponsiveImage';
 import { Paragraph } from 'components/common/typography/Paragraph';

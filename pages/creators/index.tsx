@@ -1,13 +1,13 @@
+import screen from 'assets/images/screen-img_for-creators-page.png';
 import { MainLayout } from 'components/common/layouts/MainLayout';
+import { Paragraph } from 'components/common/typography/Paragraph';
 import { Title } from 'components/common/typography/Title';
 import { Container } from 'components/common/wrappers/Container';
-import styles from './styles.module.scss';
-import Head from 'next/head';
-import screen from 'assets/images/screen-img_for-creators-page.png';
-import React from 'react';
-import Image from 'next/image';
-import { Paragraph } from 'components/common/typography/Paragraph';
 import { StoreButtons } from 'components/StoreButtons';
+import Head from 'next/head';
+import Image from 'next/image';
+import React from 'react';
+import styles from './styles.module.scss';
 
 export default function ForCreators() {
   return (

@@ -34,9 +34,9 @@ export const ContentBlock: FC<Props> = ({
 }) => (
   <div className={cn(styles.container, { [styles.container_reverse]: reverse }, className)}>
     <div className={styles.content}>
-      <Title type="h5" color="white" className={styles.additionalText}>
+      <p className={styles.additionalText}>
         {additionalText}
-      </Title>
+      </p>
       <Title type="h2" className={styles.title}>
         {titleText}
       </Title>

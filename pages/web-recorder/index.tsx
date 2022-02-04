@@ -8,7 +8,6 @@ import { WebRecorder } from 'components/WebRecorder';
 import { webRecorderBenefitsItems } from 'constants/benefits';
 import Head from 'next/head';
 import React from 'react';
-import styles from './styles.module.scss';
 
 export default function Terms() {
   return (
@@ -19,24 +18,19 @@ export default function Terms() {
       </Head>
       <MainLayout>
         <Container>
-          <GetAwesome className={styles.block} />
+          <GetAwesome className="block" />
 
-          <WebRecorder className={styles.block} />
+          <WebRecorder className="block" />
 
-          <HowItWorks className={styles.block} />
+          <HowItWorks className="block" />
 
-          <Benefits
-            withoutPadding
-            backgroundColor="transparent"
-            items={webRecorderBenefitsItems}
-            className={styles.block}
-          />
+          <Benefits withoutPadding backgroundColor="transparent" items={webRecorderBenefitsItems} className="block" />
 
           <ContentBlock
             titleText="Get the Web Recorder now!"
             paragraphText="Ready to get UCG from your fans? Download the instructions below to install and use the BULLZ Web Recorder"
             buttonText="Download now"
-            className={styles.block}
+            className="block"
           />
         </Container>
       </MainLayout>

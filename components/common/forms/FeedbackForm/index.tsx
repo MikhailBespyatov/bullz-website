@@ -21,9 +21,9 @@ export const FeedbackForm: FC<ClassName> = ({ className }) => {
 
   return (
     <div className={cn(styles.formWrapper, className)}>
-      <h5 className={styles.title}>
+      <h3 className={styles.title}>
         Get influencers and UGC for your brand now. Fill out the form and we will be in touch with you shortly!
-      </h5>
+      </h3>
       <form onSubmit={onSubmit} noValidate>
         {feedbackFormFields.map(item => {
           const { name } = item;

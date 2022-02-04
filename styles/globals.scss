@@ -1,5 +1,6 @@
 @import 'styles/variables';
 @import 'styles/fonts';
+@import 'styles/media';
 
 html,
 body {
@@ -55,4 +56,24 @@ button {
 
 .d-none {
   display: none;
+}
+
+.block {
+  margin-bottom: 80px;
+
+  @include tablet {
+    margin-bottom: 100px;
+  }
+
+  @include laptop {
+    margin-bottom: 100px;
+  }
+
+  @include desktop {
+    margin-bottom: 140px;
+  }
+
+  @include big-screen {
+    margin-bottom: 160px;
+  }
 }
